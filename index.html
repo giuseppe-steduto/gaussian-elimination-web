@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+        Risolutore matrici tramite metodo di eliminazione di Gauss
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stile.css" />
+    <script src="./controllaPagina.js"></script>
+    <script src="./MEG.js"></script>
+</head>
+    <body>
+        <h3>
+            Inserisci le dimensioni della tua matrice:
+        </h3>
+        <div id="dimensioni">
+            ( <input type="number" id="nRighe" value="3" min="2" /> x
+            <input type="number" id="nColonne" value="3" min="2" /> )
+        </div>
+
+        <br />
+        <br />
+        <h3>
+            Ora inserisci la tua matrice:
+        </h3>
+
+        <div id="matrice"></div>
+
+        <br />
+        <button id="bottoneRiduci">Riduci la matrice!</button>
+
+        <br />
+        <br />
+        <h3 id="didascaliaRisolto">
+            Ecco la tua matrice ridotta con il metodo di eliminazione di Gauss:
+        </h3>
+        <div id="risultatoMatrice"></div>
+
+        <div style="height:8rem;"></div>
+        <footer>
+            Applicativo progettato e sviluppato da <a href="mailto:giuseppe@steduto.it">Giuseppe Steduto</a>.
+            <br />
+            Codice disponibile <a href="#">qui</a>.
+        </footer>
+    </body>
+</html>
