@@ -4,7 +4,7 @@ function generaMatrice(r, c) {
     let colonneCorrenti;
     if (matrice.childNodes[0] == undefined)
         colonneCorrenti = 0;
-    else 
+    else
         colonneCorrenti = matrice.childNodes[0].childElementCount;
 
     //Aggiusta numero di righe
@@ -68,10 +68,7 @@ function aggiornaMatrice() {
     generaMatrice(r, c);
 }
 
-function stampaMatriceRisultato(matrice) {
-    let r = matrice.length;
-    let c = matrice[0].length;
-
+function stampaMatriceRisultato(r, c, matrice) {
     document.getElementById("risultatoMatrice").innerHTML = "";
     var html = "<table>";
     for (let i = 0; i < r; i++) {
@@ -91,9 +88,12 @@ window.addEventListener("load", () => {
     document.getElementById("nColonne").addEventListener("change", aggiornaMatrice);
     document.getElementById("bottoneRiduci").addEventListener("click", () => {
         document.getElementById("didascaliaRisolto").style.display = "block";
-        var m = caricaMatrice();
-        riduciGauss(m);
-        stampaMatriceRisultato(m);
+
+        let r = document.getElementById("nRighe").valueAsNumber;
+        let c = document.getElementById("nColonne").valueAsNumber;
+        let m = caricaMatrice(r, c, document.getElementById("matrice"));
+        riduciGauss(r, c, m);
+        stampaMatriceRisultato(r, c, m);
     });
     aggiornaMatrice();
 });
