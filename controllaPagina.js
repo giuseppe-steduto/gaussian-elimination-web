@@ -74,7 +74,7 @@ function stampaMatriceRisultato(r, c, matrice) {
     for (let i = 0; i < r; i++) {
         html += "<tr>";
         for (let j = 0; j < c; j++) {
-            html += "<td>" + matrice[i][j] + "</td>";
+            html += "<td>" + frazionizza(matrice[i][j]) + "</td>";
         }
         html += "</tr>";
     }
