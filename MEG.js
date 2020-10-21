@@ -41,7 +41,6 @@ function isAScala(r, c, matrice) {
 
     for (let i = 0; i < r; i++) {
         indice_pivot = 0;
-        fine = false;
         while (matrice[i][indice_pivot] == 0 && indice_pivot != c - 1) {
             indice_pivot++;
         }
