@@ -121,3 +121,21 @@ function riduciGauss(r, c, matrice) {
         });
     }
 }
+
+/*
+ * @param   {Number} num    Il numero da convertire in frazione
+ * @returns {String}        Stringa codificante la frazione (del tipo "a/b")
+ * 
+ */
+function frazionizza(num) {
+    let denominatore = 1;
+    let numeratore = 0.5;
+    if (Number.isInteger(num))
+        return "" + num;
+
+    while (!Number.isInteger(numeratore)) {
+        denominatore++;
+        numeratore = num * denominatore;
+    }
+    return "" + numeratore + "/" + denominatore; 
+}
